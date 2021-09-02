@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import './assets/styles/index.css';
 import './assets/styles/style.css'
 import App from './App';
-import { AnswersList } from './components';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
