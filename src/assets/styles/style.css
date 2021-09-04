@@ -29,15 +29,16 @@
 }
 
 .p-chat__bubble {
-    background: #41B6E6;
-    border-radius: 4px;
-    color: #fff;
+    background: #F0F4F8;
+    border-radius: 5%;
+    color: #000;
     font-size: 14px;
     font-weight: 500;
     padding: .5rem;
     margin-right: 1rem;
     max-width: 80%;
     width: auto;
+
 }
 
 .p-chat__row {
