@@ -1,80 +1,64 @@
 const defaultDataset = {
    "init": {
        answers: [
-           {content: "仕事を依頼したい", nextId: "job_offer"},
-           {content: "エンジニアのキャリアについて相談したい", nextId: "consultant"},
-           {content: "学習コミュニティについて知りたい", nextId: "community"},
-           {content: "お付き合いしたい", nextId: "dating"},
+           {content: "やっぱ激しめのやつかな！", nextId: "intense"},
+           {content: "バラード系です", nextId: "ballad"},
+           {content: "特に思い浮かばない", nextId: "nothing"},
+           {content: "じいやはどういうのが好きなの？", nextId: "recommend"},
        ],
-       question: "こんにちは！🐯トラハックへのご用件はなんでしょうか？",
+       question: "私はUVERworld好きのうたたねじいやじゃ。どんなメロディがお好みかな？",
    },
-   "job_offer": {
+
+   "init2": {
+        answers: [
+            {content: "やっぱ激しめのやつかな！", nextId: "intense"},
+            {content: "バラード系です", nextId: "ballad"},
+            {content: "特に思い浮かばない", nextId: "nothing"},
+            {content: "じいやはどういうのが好きなの？", nextId: "recommend"},
+        ],
+        question: "どんなメロディが良いかの？",
+    },
+
+   "intense": {
        answers: [
-           {content: "Webサイトを制作してほしい", nextId: "website"},
-           {content: "Webアプリを開発してほしい", nextId: "webapp"},
-           {content: "自動化ツールを作ってほしい", nextId: "automation_tool"},
-           {content: "その他", nextId: "other_jobs"}
+           {content: "好きだよ！なんかかっけー！", nextId: "https://www.youtube.com/watch?v=2QP7MybrpGw"},
+           {content: "いきなりなんだよ。別にかな", nextId: "https://www.youtube.com/watch?v=CByzFZftA_s"},
+           {content: "とりあえず頭ふりて～", nextId: "https://www.youtube.com/watch?v=7Pex6dyMBj0"},
+           {content: "最初の質問に戻る", nextId: "init2"},
        ],
-       question: "どのようなお仕事でしょうか？",
+       question: "引き金は好きかの？",
    },
-   "website": {
+
+   "ballad": {
        answers: [
-           {content: "問い合わせる", nextId: "contact"},
-           {content: "最初の質問に戻る", nextId: "init"}
+        {content: "何一つ形の見えないものは愛なんかじゃない", nextId: "https://www.youtube.com/watch?v=HqEW4B3xErQ"},
+        {content: "幸せすぎて苦しいよ", nextId: "https://www.youtube.com/watch?v=Rbe79PbcYKg"},
+        {content: "永遠なんてこの世にはない", nextId: "https://www.youtube.com/watch?v=pOFLfJA5xjM"},
+        {content: "最初の質問に戻る", nextId: "init2"},
        ],
-       question: "Webサイト細作についてですね。コチラからお問い合わせできます。",
+       question: "この中で、どの言葉がお好きかの？",
    },
-   "webapp": {
+
+   "nothing": {
        answers: [
-           {content: "問い合わせる", nextId: "contact"},
-           {content: "最初の質問に戻る", nextId: "init"}
+           {content: "ドラマの曲だよね？", nextId: "https://www.youtube.com/watch?v=KYwX6nYFTA0"},
+           {content: "なつかしい", nextId: "https://www.youtube.com/watch?v=t6E6_kxFmso"},
+           {content: "よくカラオケで歌っている人いたかも", nextId: "https://www.youtube.com/watch?v=0TbcbnGe81g"},
+           {content: "ところで、じいやにモノ申す", nextId: "contact"},
+           {content: "最初の質問に戻る", nextId: "init2"},
        ],
-       question: "Webアプリ開発についてですね。コチラからお問い合わせできます。",
+       question: "有名な曲だから、聴いたことがあるやもしれぬな。",
    },
-   "automation_tool": {
+   "recommend": {
        answers: [
-           {content: "問い合わせる", nextId: "contact"},
-           {content: "最初の質問に戻る", nextId: "init"}
+        {content: "しっとりなら私も好き", nextId: "https://www.youtube.com/watch?v=vYYCX6ptwFo"},
+        {content: "切ないラブソングとか良い", nextId: "https://www.youtube.com/watch?v=78lKhZfX38Q"},
+        {content: "ところで、じいや最近物覚え悪くない？", nextId: "https://www.youtube.com/watch?v=qimOrXfwNQY"},
+        {content: "涙出ちゃう", nextId: "https://www.youtube.com/watch?v=czRZ5wFWydA"},
+        {content: "わーお！", nextId: "https://www.youtube.com/watch?v=L-QXTyHMqJM"},
+        {content: "最初の質問に戻る", nextId: "init2"},
        ],
-       question: "自動化ツール開発についてですね。コチラからお問い合わせできます。",
-   },
-   "other_jobs": {
-       answers: [
-           {content: "問い合わせる", nextId: "contact"},
-           {content: "最初の質問に戻る", nextId: "init"}
-       ],
-       question: "その他についてですね。コチラからお問い合わせできます。",
-   },
-   "consultant": {
-       answers: [
-           {content: "YouTubeで動画を見る", nextId: "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"},
-           {content: "学習コミュニティについて知りたい", nextId: "community"},
-           {content: "最初の質問に戻る", nextId: "init"}
-       ],
-       question: "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。",
-   },
-   "community": {
-       answers: [
-           {content: "どんな活動をしているの？", nextId: "community_activity"},
-           {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
-           {content: "最初の質問に戻る", nextId: "init"}
-       ],
-       question: "2020年3月から学習コミュニティを始めました！🎉Webエンジニアへの転職を目指す人向けに、プログラミングを教えたりキャリアの相談に乗っています。",
-   },
-   "community_activity": {
-       answers: [
-           {content: "さらに詳細を知りたい", nextId: "https://youtu.be/tIzE7hUDbBM"},
-           {content: "コミュニティに参加したい", nextId: "https://torahack.web.app/community/"},
-           {content: "最初の質問に戻る", nextId: "init"}
-       ],
-       question: "フロントエンド向けの教材の提供、キャリアや勉強法に関するメルマガの配信、週1のオンライン作業会などを開催しています！\n詳細はYouTube動画で紹介しています。",
-   },
-   "dating": {
-       answers: [
-           {content: "DMする", nextId: "https://twitter.com/torahack_"},
-           {content: "最初の質問に戻る", nextId: "init"}
-       ],
-       question: "まずは一緒にランチでもいかがですか？DMしてください😘",
+       question: "わしのおすすめか？激しめも好きじゃが、わしは割としっとりよりじゃな。",
    },
 }
 

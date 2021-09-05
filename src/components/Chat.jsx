@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   inline: {
     display: 'inline',
+
   },
 }));
 
