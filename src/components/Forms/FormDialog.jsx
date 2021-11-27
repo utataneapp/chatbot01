@@ -6,6 +6,7 @@ import DialogContent from "@material-ui/core/DialogContent";
 import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import TextInput from "./TextInput";
+import { slackUrl } from "./env";
 
 const FormDialog = (props) => {
   const { handleClose } = props;
@@ -34,24 +35,24 @@ const FormDialog = (props) => {
   const submitForm = () => {
     const payload = {
       text:
-        "お問い合わせがありました\n" +
-        "お名前:" +
+        "chatbot01よりお問い合わせがありました。\n" +
+        "お名前: " +
         name +
         "\n" +
-        "Email:" +
+        "メールアドレス: " +
         email +
         "\n" +
-        "お問い合わせ内容:\n" +
+        "お問い合わせ内容: " +
         description,
     };
 
-    const url = "???";
+    const url = slackUrl;
 
     fetch(url, {
       method: "POST",
       body: JSON.stringify(payload),
     }).then(() => {
-      alert("お問い合わせありがとうございました。追ってご連絡いたします。");
+      alert("お問い合わせありがとうございました");
       resetDialog();
       handleClose();
     });
@@ -64,9 +65,7 @@ const FormDialog = (props) => {
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
     >
-      <DialogTitle id="alert-dialog-title">
-        {"Use Google's location service?"}
-      </DialogTitle>
+      <DialogTitle id="alert-dialog-title">{"お問い合わせ"}</DialogTitle>
       <DialogContent>
         <TextInput
           label={"お名前（必須）"}
@@ -95,10 +94,7 @@ const FormDialog = (props) => {
           onChange={inputDescription}
         />
 
-        <DialogContentText id="alert-dialog-description">
-          Let Google help apps determine location. This means sending anonymous
-          location data to Google, even when no apps are running.
-        </DialogContentText>
+        <DialogContentText id="alert-dialog-description"></DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button

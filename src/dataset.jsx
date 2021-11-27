@@ -1,10 +1,10 @@
 const defaultDataset = {
   init: {
     answers: [
-      { content: "やっぱ激しめのやつかな！", nextId: "intense" },
+      { content: "やっぱ激しめのやつかな", nextId: "intense" },
       { content: "バラード系です", nextId: "ballad" },
       { content: "特に思い浮かばない", nextId: "nothing" },
-      { content: "じいやはどういうのが好きなの？", nextId: "recommend" },
+      { content: "じいやはどういうのが好みなの？", nextId: "recommend" },
     ],
     question:
       "私はUVERworld好きのうたたねじいやじゃ。どんなメロディがお好みかな？",
@@ -12,10 +12,10 @@ const defaultDataset = {
 
   init2: {
     answers: [
-      { content: "やっぱ激しめのやつかな！", nextId: "intense" },
+      { content: "やっぱ激しめのやつかな", nextId: "intense" },
       { content: "バラード系です", nextId: "ballad" },
       { content: "特に思い浮かばない", nextId: "nothing" },
-      { content: "じいやはどういうのが好きなの？", nextId: "recommend" },
+      { content: "じいやはどういうのが好みなの？", nextId: "recommend" },
     ],
     question: "どんなメロディが良いかの？",
   },
@@ -23,16 +23,19 @@ const defaultDataset = {
   intense: {
     answers: [
       {
-        content: "好きだよ！なんかかっけー！",
-        nextId: "https://www.youtube.com/watch?v=2QP7MybrpGw",
+        content: "好きだよ！",
+        // 公式:7thTrigger
+        nextId: "https://www.youtube.com/watch?v=FAU7NyiqwQY",
       },
       {
-        content: "いきなりなんだよ。別にかな",
+        content: "引き金？とりまテンアゲ上等",
+        // 非公式:スパルタ
         nextId: "https://www.youtube.com/watch?v=CByzFZftA_s",
       },
       {
-        content: "とりあえず頭ふりて～",
-        nextId: "https://www.youtube.com/watch?v=7Pex6dyMBj0",
+        content: "本気の一体感求めてただろうがよ！？",
+        // 非公式:GROOVY GROOVY GROOVY
+        nextId: "https://www.youtube.com/watch?v=qhF3YJklVxk",
       },
       { content: "最初の質問に戻る", nextId: "init2" },
     ],
@@ -42,14 +45,17 @@ const defaultDataset = {
   ballad: {
     answers: [
       {
-        content: "何一つ形の見えないものは愛なんかじゃない",
-        nextId: "https://www.youtube.com/watch?v=HqEW4B3xErQ",
+        content: "何一つ形の無い見えないものは愛なんかじゃない",
+        // 非公式:体温
+        nextId: "https://www.youtube.com/watch?v=S81QeKFBfbg",
       },
       {
         content: "幸せすぎて苦しいよ",
+        // 非公式：美影意志
         nextId: "https://www.youtube.com/watch?v=Rbe79PbcYKg",
       },
       {
+        // 非公式；マダラ蝶
         content: "永遠なんてこの世にはない",
         nextId: "https://www.youtube.com/watch?v=pOFLfJA5xjM",
       },
@@ -61,18 +67,21 @@ const defaultDataset = {
   nothing: {
     answers: [
       {
-        content: "ドラマの曲だよね？",
+        content: "この歌聴いたことあるよ、じいじ",
+        // 公式:THE OVER
         nextId: "https://www.youtube.com/watch?v=KYwX6nYFTA0",
       },
       {
-        content: "なつかしい",
+        content: "なつかしい！",
+        // 非公式:SHAMROCK
         nextId: "https://www.youtube.com/watch?v=t6E6_kxFmso",
       },
       {
-        content: "よくカラオケで歌っている人いたかも",
-        nextId: "https://www.youtube.com/watch?v=0TbcbnGe81g",
+        content: "よくカラオケで歌っている人いたな",
+        // 公式：君の好きなうた
+        nextId: "https://www.youtube.com/watch?v=_F6iL239Sac",
       },
-      { content: "ところで、じいやにモノ申す", nextId: "contact" },
+      { content: "じいやにモノ申したい", nextId: "contact" },
       { content: "最初の質問に戻る", nextId: "init2" },
     ],
     question: "有名な曲だから、聴いたことがあるやもしれぬな。",
@@ -80,29 +89,34 @@ const defaultDataset = {
   recommend: {
     answers: [
       {
-        content: "しっとりなら私も好き",
+        content: "これ、、、私も好き",
+        // 非公式：心とココロ
         nextId: "https://www.youtube.com/watch?v=vYYCX6ptwFo",
       },
       {
-        content: "切ないラブソングとか良い",
-        nextId: "https://www.youtube.com/watch?v=78lKhZfX38Q",
+        content: "しゃれおつすぎひん？",
+        // 公式；stay on
+        nextId: "https://www.youtube.com/watch?v=3ze50O1sCto",
       },
       {
-        content: "ところで、じいや最近物覚え悪くない？",
+        content: "もはやドラマ",
+        // 公式；ほんの少し
+        nextId: "https://www.youtube.com/watch?v=tOFWZpwLhds",
+      },
+      {
+        content: "てか、じいや最近物覚え悪くない？",
+        // 非公式；Forget
         nextId: "https://www.youtube.com/watch?v=qimOrXfwNQY",
       },
       {
-        content: "涙出ちゃう",
-        nextId: "https://www.youtube.com/watch?v=czRZ5wFWydA",
+        content: "ライブ最高！！！",
+        // 公式：ライブ（Touch offなど）
+        nextId: "https://www.youtube.com/watch?v=F-2qZYg0RXo",
       },
-      {
-        content: "わーお！",
-        nextId: "https://www.youtube.com/watch?v=L-QXTyHMqJM",
-      },
+
       { content: "最初の質問に戻る", nextId: "init2" },
     ],
-    question:
-      "わしのおすすめか？激しめも好きじゃが、わしは割としっとりよりじゃな。",
+    question: "わしのおすすめか？これじゃこれじゃ。",
   },
 };
 

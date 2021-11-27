@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
 import defaultDataset from "./dataset";
+import { Helmet } from "react-helmet";
 import "./assets/styles/style.css";
 import { AnswersList, Chats } from "./components";
 import FormDialog from "./components/Forms/FormDialog";
@@ -80,6 +81,23 @@ const App = () => {
   //ChatsとAnswersListにpropsを渡す
   return (
     <div>
+      <Helmet
+        title={"うたたねじいやのチャットボット"}
+        meta={[
+          { name: "twitter:card", content: "summary" },
+          {
+            property: "og:image",
+            content:
+              "https://chatbot01-31558.web.app/static/media/old-man.476f4205.png",
+          },
+          {
+            property: "og:title",
+            content: "うたたねじいやのチャットボット！！！",
+          },
+          { property: "og:description", content: "UVERworldの楽曲を紹介じゃ" },
+          { property: "og:url", content: `https://chatbot01-31558.web.app/` },
+        ]}
+      />
       <section className="c-section">
         <div className="c-box">
           <Chats chats={chats} />
